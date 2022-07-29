@@ -9,6 +9,7 @@ const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
+    setMoviesList(null);
     const name = searchParams.get('name');
     if (!name) {
       return;
