@@ -26,7 +26,7 @@ const Movies = () => {
   return (
     <main>
       <SearchBox onSubmitQuery={updateQueryString} />
-      {moviesList && <MoviesList movies={moviesList} propsLink={'/movies/'} />}
+      {moviesList && <MoviesList movies={moviesList} />}
     </main>
   );
 };

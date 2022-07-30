@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <main>
       <Title>Trending today</Title>
-      <MoviesList movies={trendMovies} propsLink="movies/" />
+      <MoviesList movies={trendMovies} />
     </main>
   );
 };
