@@ -26,15 +26,15 @@ const Cast = () => {
                 profile_path: avatar,
               }) => (
                 <ListItem key={id}>
-                  {avatar ? (
-                    <Image
-                      src={`https://image.tmdb.org/t/p/w500${avatar}`}
-                      alt="actor"
-                      width="177"
-                    />
-                  ) : (
-                    <Image src={imageDefault} alt="actor" width="177" />
-                  )}
+                  <Image
+                    src={
+                      avatar
+                        ? `https://image.tmdb.org/t/p/w500${avatar}`
+                        : imageDefault
+                    }
+                    alt="actor"
+                    width="177"
+                  />
                   <Name>{name}</Name>
                   <p>{character}</p>
                 </ListItem>

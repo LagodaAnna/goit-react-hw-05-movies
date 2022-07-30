@@ -44,15 +44,13 @@ const MovieDetails = () => {
     <main>
       <Button to={backLinkHref}>Go back</Button>
       <Box display="flex" mb={5} p={4} boxShadow="normal">
-        {poster ? (
-          <Poster
-            src={`https://image.tmdb.org/t/p/w500${poster}`}
-            alt="poster"
-            width="200"
-          />
-        ) : (
-          <Poster src={defaultPoster} alt="poster" width="200" />
-        )}
+        <Poster
+          src={
+            poster ? `https://image.tmdb.org/t/p/w500${poster}` : defaultPoster
+          }
+          alt="poster"
+          width="200"
+        />
         <div>
           <Title>
             {title} ({date?.substr(0, 4) ?? 'Unknown'})
